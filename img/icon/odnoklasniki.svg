@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.15" height="18.313" viewBox="0 0 11.15 18.313">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #95d6d3;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1476.63" y="14.375" width="11.15" height="18.313" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="odnoklasniki.svg" class="cls-1" d="M1482.19,14.375a4.563,4.563,0,1,1-4.57,4.563A4.56,4.56,0,0,1,1482.19,14.375Zm0.01,2.688a1.891,1.891,0,1,1-1.89,1.891A1.886,1.886,0,0,1,1482.2,17.063Zm0,7.85a4.675,4.675,0,0,0,3.11-.772,1.607,1.607,0,0,1,2.34.386s1,2.285-2.72,2.7c0,0-.56.057-0.39,0.386s2.57,2.467,2.72,3.087a1.09,1.09,0,0,1-.39,1.544c-0.79.755-1.42,0.578-2.72-.772s-1.95-1.929-1.95-1.929V24.913Zm0,0a4.706,4.706,0,0,1-3.12-.772,1.607,1.607,0,0,0-2.34.386s-1,2.285,2.73,2.7c0,0,.55.057,0.39,0.386s-2.58,2.467-2.73,3.087a1.1,1.1,0,0,0,.39,1.544c0.8,0.755,1.42.578,2.73-.772s1.95-1.929,1.95-1.929V24.913Z" transform="translate(-1476.63 -14.375)"/>
+</svg>
