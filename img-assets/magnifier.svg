@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.063" height="41.06" viewBox="0 0 41.063 41.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="magnifier.svg" class="cls-1" d="M640.5,1727a16.5,16.5,0,1,1-16.5,16.5A16.5,16.5,0,0,1,640.5,1727Zm8.439,27.06,2.122-2.12,11,11-2.122,2.12Z" transform="translate(-622.5 -1725.5)"/>
+</svg>
