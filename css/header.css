@@ -15,6 +15,7 @@ body {
 
 .block-wrapper {
     margin: 0 auto;
+    padding: 0 5%;
     max-width: 1170px;
 }
 .header__top {
@@ -24,11 +25,24 @@ body {
     height: 4.8rem;
 }
 
+.header__city,
+.email {
+    cursor: pointer;
+}
+
 .header__top-righ {
     display: flex;
+    align-items: center;
 }
-.social__item {
+
+.social__link {
+    text-decoration: none;
     margin-left: 4rem;
+}
+
+.social__item:hover {
+    transform: rotateY(360deg) scale(1.5);
+    transition: 1s;
 }
 
 .social__item--vk::after {
@@ -56,6 +70,8 @@ body {
 
 .logo {
     transform: translateX(-3%);
+    cursor: pointer;
+    width:21rem;
 }
 
 .menu {
@@ -72,14 +88,15 @@ body {
     line-height: 8rem;
 }
 
-.menu__item:hover {
-    border-bottom: .5rem solid #f7087a;
-    transform: translateY(.2rem);
-    transition: .1s;
-}
-
 .menu__item:nth-child(3) {
     margin-right: 0;
+}
+
+.menu__item-subline {
+    position: absolute;
+    background: #f7087a;
+    width: 9rem;;
+    height: .5rem;
 }
 
 .button {
@@ -87,6 +104,7 @@ body {
     border: none;
     border-radius: 1rem;
     color: #fff;
+    margin: 1.5rem;
     text-transform: uppercase;
     height: 4.5rem;
     width: 17.5rem;
@@ -119,4 +137,25 @@ body {
 
 .header__bascket {
     margin-right: 3rem;
+}
+
+@media (max-width: 1280px) {
+    html{
+        font-size: 8px;
+    } 
+
+    .social__link {
+        margin-left: 3rem;
+    }
+
+    .header__bascket {
+        margin-right: 1rem;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .social__link {
+        margin-left: 2rem;
+    }
 }
