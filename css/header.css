@@ -108,10 +108,14 @@ body {
     border: none;
     border-radius: 1rem;
     color: #fff;
-    margin: 0 1.5rem;
+    
     text-transform: uppercase;
     height: 4.5rem;
     width: 17.5rem;
+}
+
+.header__button {
+    margin: 0 1.5rem;
 }
 
 .phones {
