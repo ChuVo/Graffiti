@@ -1,8 +1,14 @@
 .section-order {
-  background: #b1b1b1 url("../img/divan.jpg") top center no-repeat;
-  background-size: 100%;
+  background: #b1b1b1 url("../img/divan.jpg") top right no-repeat;
+  background-size: cover;
   width: 100%;
   height: 800px;
+}
+
+.section-order__block-wrapper {
+  display: flex;
+  padding-top: 9rem;
+  justify-content: space-between;
 }
 
 .card-order {
@@ -17,6 +23,7 @@
 
 .card-order__title {
   font-size: 3.2rem;
+  margin-top: 0;
 }
 
 .card-order__subtitle{
@@ -199,6 +206,63 @@ top: 52%;
 
 }
 
-.price__bascket {
-  
+.section-order__canvas {
+  background: #fff url(img/canvas.jpg);
+  height:26rem;
+  box-shadow: -12px -3px 10px -6px #333, 12px -3px 10px -6px #333, -12px -3px 10px -6px #333, 0px 33px 78px 14px #333;
+  width: 43rem;
+  transform: translateX(-7rem);
 }
+
+@media (max-width: 850px) {
+  .section-order__block-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+
+  .main__card-order {
+    background: rgb(0, 0, 0, .3);
+    padding: 3rem;
+    position: absolute;
+    right: 20%;
+    top: 410%;
+  }
+
+  .section-order__canvas {
+    transform: translateX(-70%);
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .main__card-order {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .section-order__canvas {
+    transform: translateX(-50%);
+}
+
+@media (max-width: 400px) {
+  .put {
+    padding: 0 2rem;
+  }
+
+  .section-order__canvas {
+    width: 90%;
+  }
+
+  .main__card-order {
+    padding: 2rem;
+    width: 82%;
+  }
+}
+
+
+

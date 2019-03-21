@@ -199,6 +199,9 @@ body {
 @media (max-width: 470px) {
     .button {
         font-size: 1.3rem;
-        height: 3rem;
+    }
+
+    .logo {
+        width: 14rem;
     }
 }
