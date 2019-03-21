@@ -16,7 +16,7 @@ body {
 .block-wrapper {
     margin: 0 auto;
     padding: 0 5%;
-    max-width: 1170px;
+    max-width: 117rem;
 }
 .header__top {
     align-items: center;
