@@ -54,6 +54,7 @@
 
 .patterns__items {
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +69,10 @@
   border-radius: .5rem;
   height: 2rem;
   margin-bottom: 1rem;
+}
+
+.patterns__item:hover {
+  background-color: #76c3d1;
 }
 
 .patterns__item-rectangle {
@@ -137,8 +142,7 @@
   margin-bottom: 1rem;
 }
 
-.list-size__arrow {
-  border: 0.7rem solid transparent;
+.list-size__arrow {  
   border-top: 1rem solid #f7087a;
   transform: translateY(25%);
 }
@@ -252,6 +256,13 @@ top: 52%;
 @media (max-width: 400px) {
   .put {
     padding: 0 2rem;
+  }
+
+  .patterns__items {
+    width: 20%;
+  }
+  .card-order__chek {
+    left: 6.5rem;
   }
 
   .section-order__canvas {

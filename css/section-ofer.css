@@ -1,5 +1,5 @@
 .section-ofer {
-  background: #b1b1b1 url("../img/para.jpg") no-repeat;
+  background: url("../img/para.jpg") no-repeat;
   width: 100%;
   height: 800px;
 }
@@ -18,7 +18,7 @@
 }
 
 .ofer__block {
-  background: #fff;
+  background:  rgba(255, 255, 255, .8);
   border: 1px solid  #b1b1b1;
   display: flex;
   flex-direction: column;
@@ -90,6 +90,7 @@
 .ofer__text {
   font-size: 1.4rem;
   width: 90%;
+  line-height: 1.5;
 }
 
 @media (max-width: 850px) {
@@ -99,16 +100,21 @@
 }
 
 @media (max-width: 740px) {
+.section-ofer__block-wrapper {
+  height: auto;
+  padding-top: 5rem;
+}
+
   .ofer {
     width: auto;
   }
+
   .ofer__block {
     justify-content: flex-end;
     height: 18rem;
     float: none;
     padding: 0 2rem;
   }
-
 
 
   .ofer__block:nth-child(1)::before {
@@ -129,5 +135,9 @@
   .ofer__block:nth-child(4)::before {
     left: 14rem;
     top: 56rem;
+  }
+
+  .ofer__text{
+    line-height: 1.2;
   }
 }
