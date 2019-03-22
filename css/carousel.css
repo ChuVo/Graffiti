@@ -1,0 +1,58 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__images {
+  padding: 0;
+  margin: 0;
+  width: 99999rem;
+}
+
+.carousel__item {
+  float: left;
+  list-style: none;
+  height: 20rem;
+  margin: 0;
+}
+
+image {
+  display: block;
+}
+
+.carousel__button {
+  cursor: pointer;
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  border: none;
+  background: none;
+  border-top: 0.2rem solid #fff;
+  border-left: 0.2rem solid #fff;
+  top: 50%;
+}
+
+.carousel__button:hover {
+  border-top: 0.3rem solid #fff;
+  border-left: 0.3rem solid #fff;
+}
+
+.carousel__button:focus {
+  outline: none;
+}
+
+.carousel__button:active {
+  border-top: 0.3rem solid rgb(82, 104, 201);
+  border-left: 0.3rem solid rgb(82, 104, 201);
+}
+
+.button-prev {
+  left: 5%;
+  transform: rotate(-45deg);
+}
+
+.button-next {
+  right: 5%;
+  transform: rotate(135deg);
+}
