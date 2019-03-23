@@ -4,8 +4,7 @@
 
   setTimeout(function() {
     const btnPrev = document.querySelector('.button-prev'),
-          btnNext = document.querySelector('.button-next');
-          
+          btnNext = document.querySelector('.button-next');          
 
     let originalPosition = 0,
         indexSlide = 0,
@@ -53,7 +52,7 @@
 
     holst.style.background = `url("${src}") top right /cover  no-repeat`; 
   });
-  
+
 }());
 
 

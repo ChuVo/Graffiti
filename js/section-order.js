@@ -1,38 +1,48 @@
 (function() {
-  const form1 = document.querySelector('.patterns__items:nth-child(2)'),
-        form2 = document.querySelector('.patterns__items:nth-child(3)'),
-        form3 = document.querySelector('.patterns__items:nth-child(4)');
+  const elems = document.querySelectorAll('.patterns__items');
 
-  form1.addEventListener('mouseover', () => {
-    changeColor(2);
-  });
+  let array = [],
+      index = undefined;
 
-  form1.addEventListener('mouseout', () => {
-    reChangeColor(2);
-  });
+  for ( let i = 0; i < elems.length; i++) {
+      array.push( elems[i] );  
+    }
 
-  form2.addEventListener('mouseover', () => {
-    changeColor(3);
-  });
+  function getIndexMouseOver() {
+    array.forEach( (i) => {
+      i.addEventListener( 'mouseover', () => {        
+        index = array.indexOf(i);
+        console.log( index + ' = index');        
 
-  form2.addEventListener('mouseout', () => {
-    reChangeColor(3);
-  });
-
-  form3.addEventListener('mouseover', () => {
-    changeColor(4);
-  });
-
-  form3.addEventListener('mouseout', () => {
-    reChangeColor(4);
-  });
+        changeColor(index);
+      });
+    });    
+  }
 
   function changeColor(index) {
-    document.querySelector('.patterns__items:nth-child(' + index + ') .patterns__item ').classList.add('patterns__item--color');   
+    index +=2;
+    console.log( index + ' = color');
+    document.querySelector('.patterns__items:nth-child(' + index + ') .patterns__item').classList.add('patterns__item--color');
+  }
+
+  function getIndexMouseOut() {
+    array.forEach( (i) => {
+      i.addEventListener( 'mouseout', () => {        
+        index = array.indexOf(i);
+        console.log( index + ' = index');        
+
+        reChangeColor(index);
+      });
+    });    
   }
   
   function reChangeColor(index) {
-    document.querySelector('.patterns__items:nth-child(' + index + ') .patterns__item ').classList.remove('patterns__item--color');
-  }  
+    index +=2;
+    console.log( index + ' = color');
+    document.querySelector('.patterns__items:nth-child(' + index + ') .patterns__item').classList.remove('patterns__item--color');
+  }
+  
+console.log( getIndexMouseOver() );
+console.log( getIndexMouseOut() );
 
 }());
