@@ -163,6 +163,7 @@ body {
 }
 
 .header__bascket {
+    cursor: pointer;
     margin-right: 3rem;
 }
 

@@ -2,11 +2,13 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  
 }
 
 .carousel__images {
   padding: 0;
   margin: 0;
+  transition: 1s;
   width: 99999rem;
 }
 
@@ -15,6 +17,11 @@
   list-style: none;
   height: 20rem;
   margin: 0;
+  cursor: url(../img/icon/magnifier.svg), pointer;
+}
+
+.carousel__item:hover {
+  filter: brightness(80%);
 }
 
 image {
@@ -22,20 +29,23 @@ image {
 }
 
 .carousel__button {
+  background: none;
+  border: none;
+  border-top: 0.2rem solid #fff;
+  border-left: 0.2rem solid #fff;
   cursor: pointer;
   position: absolute;
   height: 4rem;
-  width: 4rem;
-  border: none;
-  background: none;
-  border-top: 0.2rem solid #fff;
-  border-left: 0.2rem solid #fff;
   top: 50%;
+  width: 4rem;
+  z-index: 99;
+  box-shadow: -5px -5px 10px -2px #333;
+
 }
 
 .carousel__button:hover {
-  border-top: 0.3rem solid #fff;
-  border-left: 0.3rem solid #fff;
+  border-top: 0.3rem solid rgb(223, 247, 88);
+  border-left: 0.3rem solid rgb(223, 247, 88);
 }
 
 .carousel__button:focus {

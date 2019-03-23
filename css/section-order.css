@@ -71,6 +71,10 @@
   margin-bottom: 1rem;
 }
 
+.patterns__item--color {
+  background-color: #73c3d1;
+}
+
 .patterns__item:hover {
   background-color: #76c3d1;
 }
@@ -211,7 +215,8 @@ top: 52%;
 }
 
 .section-order__canvas {
-  background: #fff url(img/canvas.jpg);
+  background: #fff url("../img/holst.jpg") top right no-repeat;
+  background-size: 100%;
   height:26rem;
   box-shadow: -12px -3px 10px -6px #333, 12px -3px 10px -6px #333, -12px -3px 10px -6px #333, 0px 33px 78px 14px #333;
   width: 43rem;
