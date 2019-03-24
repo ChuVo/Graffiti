@@ -119,31 +119,33 @@
 .put__subtitle {
   font-size: 1.2rem;
   margin: 0;
-  
-
 }
 
-.list-size {
+.list-size {  
   border-radius: 1rem;
-  color: #fff;
-  display: none;
-  font-size: 1.3rem;
+  font-size: 0;
   list-style: none;
   position: absolute;
-  right: 7rem;
-  text-shadow: 1px 0 1px #000 ; 
+  right: 5rem;
   top: -20%;
-  background: rgb(0, 0, 0, .3);
-  padding: 1rem;
+  z-index: 9;
 }
 
-.list-size-visible {
-  display: block;
-  transition: 1s;
+.list-size--visible {
+  background: rgb(255, 255, 255, .6);
+  border: 0.2rem solid  #76c3d1;
+   color: rgb(0, 0, 0);
+  font-size: 1.3rem;
+   padding: 1rem;
+  transition: .2s;
 }
 
 .list-size__item {
   margin-bottom: 1rem;
+}
+
+.list-size__item:hover {
+  text-decoration: underline;
 }
 
 .list-size__arrow {  

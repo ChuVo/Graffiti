@@ -108,18 +108,21 @@ body {
     text-decoration: none;
     margin-right: 2.6rem;
     height: 100%;
-    line-height: 8rem;
+    line-height: 8.5rem;
+}
+
+.menu__item:hover {
+    border-bottom: .5rem solid  #f7087a;
+    transform: translateY(.24rem);
+}
+
+.menu__item:active {
+    color: #f7087a;
+    text-shadow: 0 0 1px #000;
 }
 
 .menu__item:nth-child(3) {
     margin-right: 0;
-}
-
-.menu__item-subline {
-    position: absolute;
-    background: #f7087a;
-    width: 9rem;;
-    height: .5rem;
 }
 
 .button {
@@ -132,14 +135,26 @@ body {
     height: 4.5rem;
     width: 17.5rem;
 }
+.button:hover {
+    background: radial-gradient(#FB75B5, #f7087a);
+}
 
-.header__button {
+.button:active {
+    box-shadow: 0 .2rem .5rem rgb(139, 120, 246);
+}
+
+.header__button { 
     margin: 0 1.5rem;
 }
 
 .phones {
     display: flex;
     justify-content: space-between;
+}
+
+.phones__image:hover {
+    transform: rotateX(360deg) scale(1.5);
+    transition: 1s;
 }
 
 .phones__call {
