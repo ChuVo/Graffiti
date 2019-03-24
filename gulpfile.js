@@ -4,7 +4,21 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const cssnano = require('gulp-cssnano');
 const sourcemaps = require('gulp-sourcemaps');
-const watch = require('gulp-watch');
+
+const paths = {
+  src: {
+    styles: 'css/*.css',
+    scripts: 'js/*.js'
+  },
+  build: {
+    styles: 'build/styles',
+    scripts: 'build/scripts'
+  },
+  buildNames: {
+    styles: 'style.min.css',
+    scripts: 'script.min.js'
+  }
+}
 
 gulp.task('hello', () => console.log('hello'));
 gulp.task('currentTime', () => {
@@ -12,31 +26,30 @@ gulp.task('currentTime', () => {
   console.log( "Текущее время: " + date.getHours() + ":" + date.getMinutes() );
 });
 
-gulp.task('build-js', () => {
-  return gulp.src('js/*.js')
-  .pipe(sourcemaps.init())
-    .pipe(concat('script-min.js'))
+gulp.task( 'build-js', () => {
+  return gulp.src( [paths.src.scripts] )
+  .pipe( sourcemaps.init() )
+    .pipe( concat( paths.buildNames.scripts ) )
       .pipe(babel({
         presets: ['@babel/env']
       }))
-      .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build/js'));
+      .pipe( uglify() )
+    .pipe( sourcemaps.write('.') )
+    .pipe( gulp.dest( paths.build.scripts ) );
 });
 
-gulp.task('build-css', () => {
-  return gulp.src('css/*.css')
-    .pipe(sourcemaps.init())
-      .pipe(concat('style-min.css'))
-      .pipe(cssnano())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build/css'));
+gulp.task( 'build-css', () => {
+  return gulp.src( [paths.src.styles] )
+    .pipe( sourcemaps.init() )
+      .pipe( concat( paths.buildNames.styles ) )
+      .pipe( cssnano())
+    .pipe( sourcemaps.write('.') )
+    .pipe( gulp.dest( paths.build.styles ) );
 });
 
-gulp.task('default', ['build-css', 'build-js']);
+gulp.task( 'default', ['build-css', 'build-js'] );
 
-gulp.task('watch', () => {
-  gulp.watch('js/*.js', ['build-js']);
-  gulp.watch('css/*.js', ['build-css']);
+gulp.task( 'watch', () => {
+  gulp.watch( paths.src.scripts, ['build-js'] );
+  gulp.watch( paths.src.styles, ['build-css'] );
 });
-
