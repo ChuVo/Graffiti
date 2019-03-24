@@ -1,5 +1,6 @@
 .section-order {
-  background: #b1b1b1 url("../img/divan.jpg") top right no-repeat;
+  background: rgb(156, 148, 146)  top right no-repeat;
+  background-image: url("../img/sofa.jpg");
   background-size: cover;
   width: 100%;
   height: 800px;
@@ -245,19 +246,19 @@ top: 52%;
     transform: translateX(-70%);
     position: absolute;
     top: 3rem;
-    left: 50%;
-    
+    left: 50%;    
   }
 }
 
 @media (max-width: 600px) {
   .main__card-order {
-    right: 50%;
     transform: translateX(50%);
+    right: 50%;    
   }
   
   .section-order__canvas {
     transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 400px) {
